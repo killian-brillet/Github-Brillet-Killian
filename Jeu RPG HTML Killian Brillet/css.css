@@ -1,0 +1,95 @@
+body{
+	background-image: url("images/fond.png");
+	background-repeat: no-repeat;
+	background-color: #000000;
+}
+
+#combattext{
+  display: flex;
+  color:#FFFF00;
+  font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace ;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  text-shadow: 2px 2px #404040;
+  background-color: #4750D6 ;
+  border: 2px solid black;
+  box-shadow: 5px 5px 5px #000000;
+  opacity: 0.9;
+  border-radius: 10px;
+  height : 60px;
+  width: 600px;
+  padding: 5px 5px;
+  position: absolute;
+  left: 250px;
+  top : 10px;
+}
+
+#monstre{
+	background-image : url("images/monstre.png");
+	background-repeat: no-repeat;
+	height:200px;
+	width:150px;
+	position : absolute;
+	top : 230 ;
+	left : 490 ;
+}
+
+#pvmon{
+  position : absolute;
+  top : 170 ;
+  left : 55 ;
+  font-size: 25px;
+  font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace ;
+}
+
+#jeaneude{
+  display: flex;
+  color:#FFFF00;
+  font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace ;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-size: 20px;
+  text-shadow: 2px 2px #404040;
+  background-color: #4750D6 ;
+  border: 2px solid black;
+  opacity: 0.9;
+  border-radius: 10px;
+  height : 150px;
+  width: 200px;
+  padding: 5px 5px;
+  position: absolute;
+  left: 450px;
+  top : 450px;
+  box-shadow: 5px 5px 5px #000000;
+}
+
+#nomjeaneude{
+  font-size:25px;
+}
+
+#pv{
+	display : flex;
+	flex-direction: row;
+}
+
+#mana{
+	display : flex;
+	flex-direction: row;
+}
+
+.button{
+	background:linear-gradient(to bottom, #ffffbf 5%, #ffff00 100%);
+	background-color:#ffffbf;
+	border-radius:10px;
+	border:2px solid #878787;
+	cursor:pointer;
+	color:#000000;
+	font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace ;
+  font-size:15px;
+  font-weight:bold;
+  height: 25px;
+  width: 80px;
+  box-shadow: 1px 1px 1px #000000;
+}
