@@ -1,7 +1,7 @@
 body{
 	background-image: url("images/fond.png");
 	background-repeat: no-repeat;
-	background-color: #000000;
+  background-color: #000000;
 }
 
 #combattext{
@@ -31,15 +31,45 @@ body{
 	height:200px;
 	width:150px;
 	position : absolute;
-	top : 230 ;
+	top : 200 ;
 	left : 490 ;
 }
 
+.mouseover{
+    display: flex;
+    transform: scale(0);
+    transition: 0.1s;
+    color:#FFFF00;
+    font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    text-shadow: 2px 2px #404040;
+    background-color: #4750D6 ;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px #000000;
+    opacity: 0.9;
+    border-radius: 10px;
+    height : 50px;
+    width: 200px;
+    padding: 5px 5px;
+    position: absolute;
+    left: -40px;
+    top : 170px;
+}
+
+#monstre:hover > .mouseover{
+  transform: scale(1);
+}
+
+#statmonstre{
+	display : flex;
+	flex-direction: row;
+}
+
 #pvmon{
-  position : absolute;
-  top : 170 ;
-  left : 55 ;
-  font-size: 25px;
+  font-size: 20px;
   font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace ;
 }
 
