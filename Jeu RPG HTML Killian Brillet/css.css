@@ -109,7 +109,37 @@ body{
 	flex-direction: row;
 }
 
-.button{
+#attaque{
+	background:linear-gradient(to bottom, #ffffbf 5%, #ffff00 100%);
+	background-color:#ffffbf;
+	border-radius:10px;
+	border:2px solid #878787;
+	cursor:pointer;
+	color:#000000;
+	font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace ;
+  font-size:15px;
+  font-weight:bold;
+  height: 25px;
+  width: 80px;
+  box-shadow: 1px 1px 1px #000000;
+}
+
+#defense{
+	background:linear-gradient(to bottom, #ffffbf 5%, #ffff00 100%);
+	background-color:#ffffbf;
+	border-radius:10px;
+	border:2px solid #878787;
+	cursor:pointer;
+	color:#000000;
+	font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace ;
+  font-size:15px;
+  font-weight:bold;
+  height: 25px;
+  width: 80px;
+  box-shadow: 1px 1px 1px #000000;
+}
+
+#soin{
 	background:linear-gradient(to bottom, #ffffbf 5%, #ffff00 100%);
 	background-color:#ffffbf;
 	border-radius:10px;

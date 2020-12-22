@@ -9,6 +9,7 @@ var atkperso = 20 ;
 var defperso = 0.5 ;
 var valeurheal = 20 ;
 var atkmonstre = 10 ;
+var boutonutilise = 0 ;
 
 function verifpv(){
 	if (pvmonstre <= 0){
@@ -20,8 +21,8 @@ function verifpv(){
 }
 
 atk.onclick = function(){
-	texte.innerHTML = "Vous attaquez, <br> Quellle est votre prochaine action?";
-	if (pvperso > 0, pvmonstre > 0){
+	if (pvperso > 0, pvmonstre > 0, boutonutilise != 1){
+		texte.innerHTML = "Vous attaquez, <br> Quellle est votre prochaine action?";
 		if (pvmonstre  <= atkperso){
 			pvmonstre = 0;
 		}
@@ -37,11 +38,15 @@ atk.onclick = function(){
 		}
 		document.getElementById("affichagepv").innerHTML=pvperso;
 	}
+	else{
+		texte.innerHTML = "Vous avez déja utilisé l'attaque au tour précédent, choisissez une autre attaque."
+	}
+	boutonutilise = 1
 	verifpv()
 }
 
 def.onclick = function(){
-	if (pvperso > 0, pvmonstre > 0){
+	if (pvperso > 0, pvmonstre > 0, boutonutilise != 2){
 		texte.innerHTML = "Vous defendez, <br> Quellle est votre prochaine action?";
 		if (pvperso <= (atkmonstre*defperso)){
 			pvperso = 0
@@ -51,11 +56,15 @@ def.onclick = function(){
 		}
 		document.getElementById("affichagepv").innerHTML=pvperso;
 	}
+	else{
+		texte.innerHTML = "Vous avez déja utilisé la defense au tour précédent, choisissez une autre attaque."
+	}
+	boutonutilise = 2
 	verifpv()
 }
 
 heal.onclick = function(){
-	if (pvperso > 0, pvmonstre > 0){
+	if (pvperso > 0, pvmonstre > 0, boutonutilise != 3){
 		if (manaperso >= 10){
 			pvperso = pvperso+(valeurheal-atkmonstre);
 			manaperso = manaperso-10;
@@ -68,4 +77,9 @@ heal.onclick = function(){
 			texte.innerHTML = "Vous n'avez pas assez de mana";
 		}
 	}
+	else{
+		texte.innerHTML = "Vous avez déja utilisé le soin au tour précédent, choisissez une autre attaque."
+	}
+	boutonutilise = 3
+	verifpv()
 }
