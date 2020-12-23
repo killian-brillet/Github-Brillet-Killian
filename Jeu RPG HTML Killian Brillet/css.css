@@ -110,8 +110,7 @@ body{
 }
 
 #attaque{
-	background:linear-gradient(to bottom, #ffffbf 5%, #ffff00 100%);
-	background-color:#ffffbf;
+	background-color:#ffff3b;
 	border-radius:10px;
 	border:2px solid #878787;
 	cursor:pointer;
@@ -125,8 +124,7 @@ body{
 }
 
 #defense{
-	background:linear-gradient(to bottom, #ffffbf 5%, #ffff00 100%);
-	background-color:#ffffbf;
+	background-color:#ffff3b;
 	border-radius:10px;
 	border:2px solid #878787;
 	cursor:pointer;
@@ -140,8 +138,7 @@ body{
 }
 
 #soin{
-	background:linear-gradient(to bottom, #ffffbf 5%, #ffff00 100%);
-	background-color:#ffffbf;
+	background-color:#ffff3b;
 	border-radius:10px;
 	border:2px solid #878787;
 	cursor:pointer;

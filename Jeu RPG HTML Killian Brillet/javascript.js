@@ -25,6 +25,9 @@ function verifpv(){
 
 atk.onclick = function(){
 	if (finpartie != 1 ){
+		atk.style.backgroundColor = "#C0C0C0"
+		def.style.backgroundColor = "#FFFF00"
+		heal.style.backgroundColor = "#FFFF00"
 		if (pvperso > 0, pvmonstre > 0, boutonutilise != 1){
 			texte.innerHTML = "Vous attaquez, <br> Quellle est votre prochaine action?";
 			if (pvmonstre  <= atkperso){
@@ -42,16 +45,16 @@ atk.onclick = function(){
 			}
 			document.getElementById("affichagepv").innerHTML=pvperso;
 		}
-		if (pvperso > 0, pvmonstre > 0, boutonutilise = 1){
-			texte.innerHTML = "Vous avez déja utilisé l'attaque au tour précédent, choisissez une autre attaque."
-		}
-		boutonutilise = 1
 		verifpv()
+		boutonutilise = 1
 	}
 }
 
 def.onclick = function(){
 	if (finpartie != 1 ){
+		atk.style.backgroundColor = "#FFFF00"
+		def.style.backgroundColor = "#C0C0C0"
+		heal.style.backgroundColor = "#FFFF00"
 		if (pvperso > 0, pvmonstre > 0, boutonutilise != 2){
 			texte.innerHTML = "Vous defendez, <br> Quellle est votre prochaine action?";
 			if (pvperso <= (atkmonstre*defperso)){
@@ -62,11 +65,8 @@ def.onclick = function(){
 			}
 			document.getElementById("affichagepv").innerHTML=pvperso;
 		}
-		if (pvperso > 0, pvmonstre > 0, boutonutilise = 2){
-			texte.innerHTML = "Vous avez déja utilisé la defense au tour précédent, choisissez une autre attaque."
-		}
-		boutonutilise = 2
 		verifpv()
+		boutonutilise = 2
 	}
 }
 
@@ -74,7 +74,15 @@ heal.onclick = function(){
 	if (finpartie != 1 ){
 		if (pvperso > 0, pvmonstre > 0, boutonutilise != 3){
 			if (manaperso >= 10){
-				pvperso = pvperso+(valeurheal-atkmonstre);
+				atk.style.backgroundColor = "#FFFF00"
+				def.style.backgroundColor = "#FFFF00"
+				heal.style.backgroundColor = "#C0C0C0"
+				if (pvperso >= 40){
+					pvperso = 50
+				}
+				else{
+					pvperso = pvperso+(valeurheal-atkmonstre);
+				}
 				manaperso = manaperso-10;
 				document.getElementById("affichagepv").innerHTML=pvperso;
 				document.getElementById("affichagemana").innerHTML=manaperso;
@@ -84,10 +92,7 @@ heal.onclick = function(){
 				texte.innerHTML = "Vous n'avez pas assez de mana";
 			}
 		}
-		if (pvperso > 0, pvmonstre > 0, boutonutilise = 3){
-			texte.innerHTML = "Vous avez déja utilisé le soin au tour précédent, choisissez une autre attaque."
-		}
-		boutonutilise = 3
 		verifpv()
+		boutonutilise = 3
 	}
 }
